@@ -11,11 +11,11 @@ class MainClass
     when 1
       Numbers.new
     when 2
-      puts "Enter circle radius:"
+      puts "Enter circle radius: "
       radius = gets.chomp.to_i
       Circle.new(radius)
     when 3
-      puts "Enter matrix size:"
+      puts "Enter matrix size: "
       matrix_size = gets.chomp.to_i
       Matrix.new(matrix_size)
     when 4
