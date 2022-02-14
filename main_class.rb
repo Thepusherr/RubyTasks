@@ -38,7 +38,7 @@ end
 
 task = ""
 while task != 0
-  puts "Enter number of task(from 1 to 6, 0 - to exit):"
+  puts "Enter number of task(from 1 to 6, 0 - to exit): "
   task = gets.to_i
   MainClass.new(task)
 end
