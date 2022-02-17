@@ -27,11 +27,11 @@ class MainClass
       StringConverter.new(str)
     when 6
       array = ["a28", [1, 2, 3, 4, "1"], %w[2 5 10], [111, 222, 333, 444], ["i", "love", "ruby", {key: "value"}], {key: "value"}, [[["text", 100_000]]]]
-      output = ArraySelectByType.new(array)
-      output.values_from_array_using_type(String)
-      output.values_from_array_using_type(Integer)
-      output.values_from_array_using_type(Hash)
-      output.values_from_array_using_type(Array)
+      output = ArraySelectByType.new
+      output.serch_values_by_type(array,String)
+      output.serch_values_by_type(array,Integer)
+      output.serch_values_by_type(array,Hash)
+      output.serch_values_by_type(array,Array)
     end
   end
 end

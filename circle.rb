@@ -1,7 +1,6 @@
 class Circle
   def initialize(radius)
-    @radius = radius
-    draw_circle(@radius)
+    draw_circle(radius)
   end
 
   private

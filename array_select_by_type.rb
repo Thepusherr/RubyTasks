@@ -1,25 +1,11 @@
 class ArraySelectByType
-  def initialize(array)
-    @array = array
-  end
-
-  def values_from_array_using_type(type)
+  def serch_values_by_type(array,type)
     arr = []
-    rec_finder(@array, type, arr)
+    rec_finder(array.to_a,type,arr)
     p arr
   end
 
-  private
-
   def rec_finder(array, type, arr)
-    if array.instance_of?(Array || Hash)
-      array.map { |x|
-        if x.instance_of? type
-          arr.append(x)
-        elsif x.instance_of?(Array || Hash)
-          rec_finder(x, type, arr)
-        end
-      }
-    end
+    array.map { |x| x.instance_of?(type) ? arr.append(x) : (x.instance_of?(Array || Hash) ? rec_finder(x, type,arr): arr ) }; arr
   end
 end
