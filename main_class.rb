@@ -1,6 +1,6 @@
 require_relative "numbers"
 require_relative "circle"
-require_relative "matrix"
+require_relative "identity_matrix"
 require_relative "hash_key_founder"
 require_relative "string_converter"
 require_relative "array_select_by_type"
@@ -17,7 +17,7 @@ class MainClass
     when 3
       puts "Enter matrix size: "
       matrix_size = gets.chomp.to_i
-      Matrix.new(matrix_size)
+      IdentityMatrix.new(matrix_size)
     when 4
       hash = {key1: {}, key2: {}, key3: {key4: "str", key5: "str2", key6: {key7: {key8: 1, key9: [2]}}}}
       key = :key9
