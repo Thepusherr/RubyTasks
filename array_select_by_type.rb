@@ -6,6 +6,11 @@ class ArraySelectByType
   end
 
   def rec_finder(array, type, arr)
-    array.map { |x| x.instance_of?(type) ? arr.append(x) : (x.instance_of?(Array || Hash) ? rec_finder(x, type,arr): arr ) }; arr
+    array.map { |x|
+      if x.instance_of?(type)
+        arr.append(x)
+      else
+        x.instance_of?(Array || Hash) ? rec_finder(x, type, arr) : arr
+      end }; arr
   end
 end

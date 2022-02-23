@@ -5,5 +5,8 @@
       <option name="myUseStandardGemIfPossible" value="true" />
       <option name="myRunRubocopOnSave" value="true" />
     </inspection_tool>
+    <inspection_tool class="RubyResolve" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="warnImplicitResults" value="false" />
+    </inspection_tool>
   </profile>
 </component>
